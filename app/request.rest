@@ -1,0 +1,166 @@
+// users
+GET http://localhost:8080/users
+
+###
+POST http://localhost:8080/users/register
+Content-Type: application/json
+
+{
+    "name": "Burak",
+    "pass": "1234",
+    "nick": "Nick2"
+}
+
+###
+POST http://localhost:8080/users/login
+Content-Type: application/json
+
+{
+    "name": "Burak",
+    "pass": "1234"
+}
+
+###
+DELETE http://localhost:8080/users/85
+
+
+// habits 
+
+###
+GET http://localhost:8080/habits/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
+
+
+
+###
+POST http://localhost:8080/habits/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
+
+{
+    "name": "deneme",
+    "start": "2022-06-20T15:18:06.302053",
+    "due": "2022-06-20T15:18:06.302053"
+}
+
+
+###
+DELETE http://localhost:8080/habits/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg/15
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
+
+
+###
+PATCH http://localhost:8080/habits/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg/13
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
+
+{
+    "name": "project",
+    "start": "2022-06-20T15:18:06.302053",
+    "due": "2022-06-20T15:18:06.302053"
+}
+
+# GET http://localhost:8080/habits/after/10
+# SELECT * FROM habit where id > limit 10
+
+//books
+
+###
+GET http://localhost:8080/books
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
+
+
+
+###
+POST http://localhost:8080/books
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
+
+{
+    "name": "Ezilenler",
+    "author": "Dostoyevski",
+    "page": 450
+}
+
+
+###
+DELETE http://localhost:8080/books/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
+
+###
+PATCH http://localhost:8080/books/6
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
+
+{
+    "name": "JBookNameUdated",
+    "author": "author"
+}
+
+###
+
+//place
+GET http://localhost:8080/places
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
+
+###
+
+POST http://localhost:8080/places
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
+
+{
+    "name": "istanbul",
+    "belong": 2
+}
+
+###
+DELETE http://localhost:8080/places/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
+
+
+###
+PATCH http://localhost:8080/places/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
+
+{
+    "visited": 1
+}
+
+
+###
+
+//dailyplans
+GET http://localhost:8080/dailyplans
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
+
+
+###
+PATCH http://localhost:8080/dailyplans/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
+
+{
+    "tzone7": "Kahve İçmek"
+}
+
+###
+
+POST http://localhost:8080/dailyplans
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
+
+{
+    "date": "2022-12-30",
+    "tzone0": "Sabah kalkmak",
+    "tzone1": "Kitap Okumak",
+    "tzone2": "Kod yazmak",
+    "tzone3": "Spor Yapmak",
+    "tzone4": "Ders Çalışmak",
+    "tzone5": "Okula Gitmek"
+}
+
+####
+DELETE http://localhost:8080/dailyplans/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1cmFrIiwiaWF0IjoxNjcxOTA1OTA4LCJleHAiOjE3MDM0NDE5MDh9.Xzo0sO6mL5Gl0dg-5fnUqNwtjfiTguAG2LRQuun3vEg
